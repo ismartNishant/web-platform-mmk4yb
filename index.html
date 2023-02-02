@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+  
+    <link rel="stylesheet" href="styles.css" />
+  
+  </head>
+  <body>
+    <header>
+      <img class="logo" alt="...." src="./logo.jpg" />
+      <h1>Web Design in 4 minutes</h1>
+      <p>
+        <a href="https://jgthms.com" target="_blank">by Jeremy Thomas</a>
+      </p>
+    </header>
+    <main>
+      <section class="main-content">
+        <div>
+          <h2>Understanding the fundamentals of state in Javascript</h2>
+
+          <p>Designed by <span class="selector">Nishant Rajput</span></p>
+
+          <p>
+            Chapter 3 from the book; Vumbula React — Co-authored by <span class="fun-name">John Kagga</span>
+          </p>
+          <p>
+            In earlier chapters, we’ve dealt mostly with functional React
+            components that do not require <span class="fun-name">state</span> management. This chapter’s main
+            focus is on <span class="fun-name">state,</span> its management and components that utilise it in
+            React.
+          </p>
+        </div>
+        <div>
+          <h2>What is State?</h2>
+          <p>
+            <span class="fun-name">State,</span> is a JavaScript object that stores a component’s dynamic data
+            and determines the component’s behaviour. Because <span class="fun-name">state</span> is dynamic,
+            it enables a component to keep track of changing information in
+            between <span class="classnme">renders </span> and for it to be dynamic and interactive.
+          </p>
+
+          <p>
+            <span class="fun-name">State,</span> is similar to <span class="arithmatic-sign" style="font-weight: bold;">props</span> but unlike <span class="arithmatic-sign" style="font-weight: bold;">props,</span> it is private to a
+            component and is controlled solely by the said <span class="selector">component.</span> In the
+            examples from previous chapters, the behaviour of components has
+            primarily depended on the <span class="arithmatic-sign" style="font-weight: bold;">props</span> that are passed down to them. In
+            those cases, the components that receive the <span class="arithmatic-sign" style="font-weight: bold;">props</span> have no control
+            over them because <span class="arithmatic-sign" style="font-weight: bold;">props</span> are read-only.
+          </p>
+        </div>
+        <div>
+          <h2>Adding <span class="fun-name">State</span> to a Class Component</h2>
+<pre id="plain-text">
+<span class="selector"> class </span> <span class="classnme"> Greeting </span>  <span class="selector">extends</span> <span class="classnme"> React.Component </span>{ 
+<span class="fun-name"> render </span><span class="brackets">( ) </span>
+    { 
+    <span class="function-name"> return </span><span class="plain-text"><span></span><span class="fun-name"> &lt; h1&gt;</span> I’m a component in need of some state!<span class="fun-name"> &lt;/h1&gt;</span> </span>; </span> 
+    } </span>
+} 
+</pre>
+          <p>
+            Adding <span class="fun-name">state,</span> to the Greeting component above involves defining
+            within the class <span class="selector">component</span>, a constructor function that assigns the
+            initial <span class="fun-name">state</span> using <span class="fun-name">this.State,</span>
+          </p>
+<pre id="plain-text">
+<span class="selector">class</span> <span class="classnme"> Greeting </span> <span class="selector"> extends </span> <span class="classnme"> React.Component </span> {
+    <span class="selector">constructor</span> <span class="fun-name">(</span><span class="arguments">props</span><span class="fun-name">)</span> {
+        <span class="selector">super</span> <span class="fun-name">(</span><span class="arguments">props</span><span class="fun-name">)</span>;
+        <span class="comments">// Define your state object here</span>
+        <span class="selector">this.</span><span class="arguments">state</span> <span class="arithmatic-sign">=</span> {
+            <span class="arguments">name: ‘Jane Doe’</span>
+        }
+      }
+      <span class="fun-name">render()</span>{
+        <span class="function-name"> return </span><span class="plain-text"><span></span><span class="fun-name"> &lt; h1&gt;</span> Hello { <span class="selector">this</span><span class="arguments">.state.name</span> }<span class="fun-name"> &lt;/h1&gt;</span> </span>; </span> 
+      }
+    }
+</pre>
+        </div>
+        <div>
+          <h2>Investigating State using React Dev Tools</h2>
+          <p>
+            The devtools are available for download on both <span class="classnme">Mozilla Firefox</span>
+            Add-ons and the <span class="classnme">Chrome Web Store.</span> Follow the appropriate link to
+            install the devtools depending on which browser you have installed
+            on your computer.
+          </p>
+
+          <p>
+            Throughout the rest of this book, Chrome will be used as the browser
+            of choice. In order to confirm successful installation of the
+            devtools on Chrome, open the developer tools window using <span style="font-weight:bold" class="arithmatic-sign">Cmd+Opt+I</span>
+            on a Mac or <span style="font-weight:bold" class="arithmatic-sign">Ctrl+Alt+I</span> on a windows PC. You should now see a React
+            tab.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
